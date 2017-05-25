@@ -71,6 +71,14 @@ module.exports = {
       },
     },
     {
+      test: /\.(php)$/,
+      loader: 'file-loader',
+      query: {
+        name: '[path][name].[ext]?',
+        limit: 0
+      },
+    },
+    {
       test: /\.(eot|ttf|wav|mp3)$/,
       loader: 'file-loader',
       query: {
