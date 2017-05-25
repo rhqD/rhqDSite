@@ -1,0 +1,51 @@
+:root {
+  --globalFontFamily: \30E1\30A4\30EA\30AA, \6E38\30B4\30B7\30C3\30AF, "Yu Gothic", sans-serif;
+  --leftMenuWidth: 225px;
+  --sideCtrlWidth: 26px;
+  --headerHeight: 51px;
+  --headerBarHeight: 48px;
+  --contentSectionPaddingTop: 99px;
+  --tableHeaderColor: #f0f0f0;
+  --lowMessageColor: rgba(21, 199, 124, 1);
+  --ordinaryMessageColor: rgba(31, 165, 208, 1);
+  --highMessageColor: rgba(209, 53, 43, 1);
+  --calendarMonthEventColor: rgb(172, 197, 246);
+  --calendarDayEventColor: rgb(159, 220, 201);
+  --calendarSundayFontColor: #ff4c4c;
+  --calendarSaturdayFontColor: #0af;
+}
+
+/** Color Guide common **/
+:root {
+  --leftMenuBackgroundColor: #2f5a7f;
+  --leftMenuRollOverBackgroundColor: #1d394f;
+  --leftMenuSecondaryMenuBackgroundColor: #23445f;
+  --leftMenuIconColor: #a5bac3;
+  --leftMenuTextColor: #fff;
+  --leftMenuCollapseButtonBackgroundColor: #d7b769;
+  --topBarBackgroundColor: #123a5c;
+  --commonModalHeaderBgColor: #3185d1;
+  --commonModalFooterBgColor: #f3f7f8;
+  --mainAreaBackgroundColor: #f3f3f3;
+  --kaikeiYearColor: #fece5b;
+}
+
+/** service theme color **/
+:root {
+  --defaultThemeColor: #53a3e7;
+  --defaultTextColor: #5cf;
+  --kaikeiThemeColor: #8271a5;
+  --kaikeiTextColor: #c9f;
+  --payrollThemeColor: #66a172;
+  --payrollTextColor: #6c6;
+  --gakuhiThemeColor: #dcae27;
+  --gakuhiTextColor: #fc6;
+  --shisanThemeColor: #c97495;
+  --shisanTextColor: #f9c;
+  --shokuinThemeColor: #357cb2;
+  --shokuinTextColor: #69c;
+  --pKaikeiTextColor: #69c;
+  --pKaikeiThemeColor: #696969;
+  --jinjiTextColor: #69c;
+  --jinjiThemeColor: #709bb0;
+}

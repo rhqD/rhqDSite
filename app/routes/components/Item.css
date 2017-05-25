@@ -1,0 +1,31 @@
+.item {
+  height: 40px;
+  background-color: #ddd;
+  margin: 10px;
+  border-left: 4px solid blue;
+  padding-left: 10px;
+  align-items: center;
+  display: flex;
+}
+
+.itemContent {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.actionNameInput {
+  padding: 0 5px;
+}
+
+.renderCheck {
+  margin: 0 10px;
+}
+
+.paramsInput {
+  margin-left: 10px;
+  border-radius: 13px;
+  padding: 0 5px;
+  width: 150px;
+}

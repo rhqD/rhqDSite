@@ -1,0 +1,4 @@
+## Ignore the node_modules folder in the root of the repository
+node_modules\
+build\
+prod\

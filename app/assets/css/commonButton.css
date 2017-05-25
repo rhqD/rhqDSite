@@ -1,0 +1,77 @@
+:root {
+  --commonInfoButtonBgColor: #579ddb;
+  --commonInfoButtonBorderColor: #3185d1;
+  --commonWarningButtonBgColor: #ff9731;
+  --commonWarningButtonBorderColor: #f78719;
+  --commonDangerButtonBgColor: #f56954;
+  --commonDangerButtonBorderColor: #f95b43;
+  --commonCancelButtonBgColor: #e1e1e1;
+  --commonCancelButtonBorderColor: #ddd;
+  --commonCancelButtonOutlineColor: #dfdfdf;
+  --commonSearchButtonBgColor: #ff9731;
+}
+
+/* 共通button样式 使用方法： 重写react bootstrap的Button组件的bsClass值为 commonButton btn */
+button[class~='commonButton'] {
+  border-radius: 0;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0 1px 1px, rgba(0, 0, 0, 0.117647) 0 1px 4px;
+}
+
+/* commonButton的 info color为UI设计后的颜色 */
+button[class~='commonButton'][class~='btn-search'] {
+  background-color: var(--commonSearchButtonBgColor);
+  border-width: 1px;
+  color: white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--commonSearchButtonBgColor);
+    outline: none;
+  }
+}
+
+/* commonButton的 info color为UI设计后的颜色 */
+button[class~='commonButton'][class~='btn-info'] {
+  background-color: var(--commonInfoButtonBgColor);
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--commonInfoButtonBorderColor);
+  }
+}
+
+/* commonButton的 warning color为UI设计后的颜色 */
+button[class~='commonButton'][class~='btn-warning'] {
+  background-color: var(--commonWarningButtonBgColor);
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--commonWarningButtonBorderColor);
+  }
+}
+
+/* commonButton的 danger color为UI设计后的颜色 */
+button[class~='commonButton'][class~='btn-danger'] {
+  background-color: var(--commonDangerButtonBgColor);
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--commonDangerButtonBorderColor);
+  }
+}
+
+/* commonButton的 cancel color为UI设计后的颜色 */
+button[class~='commonButton'][class~='btn-cancel'] {
+  background-color: var(--commonCancelButtonBgColor);
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--commonCancelButtonBorderColor);
+    outline-color: var(--commonCancelButtonOutlineColor);
+  }
+}

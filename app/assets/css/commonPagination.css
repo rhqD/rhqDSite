@@ -1,0 +1,21 @@
+ul[class~='pagination'] {
+  & > li:first-child,
+  & > li:last-child {
+    & > a {
+      &:focus {
+        outline-width: 0;
+      }
+
+      border-radius: 0 !important;
+      padding: 6px 9px;
+    }
+  }
+
+  & [class~='active'],
+  &:focus,
+  &:hover {
+    & > a {
+      background-color: rgb(34, 163, 232) !important;
+    }
+  }
+}

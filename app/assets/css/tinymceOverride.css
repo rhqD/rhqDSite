@@ -1,0 +1,17 @@
+/* 重写react-tinymce的样式 */
+@import "./consts.css";
+
+[class~='mce-txt'],
+[class~='mce-text'],
+[class~='mce-title'],
+[class~='mce-label'] {
+  font-family: var(--globalFontFamily) !important;
+}
+
+[class~='mce-window'] {
+  z-index: 1050 !important;
+}
+
+div[id='mce-modal-block'] {
+  z-index: 1049 !important;
+}
