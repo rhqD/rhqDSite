@@ -63,7 +63,7 @@ module.exports = {
       include: path.join(__dirname, 'app')
     },
     {
-      test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+      test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|mp4)$/,
       loader: 'url-loader',
       query: {
         name: '[path][name].[ext]?[hash]',

@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "react+redux+react-router+postcss+babel+webpack+mocha+istanbul",
   "scripts": {
+    "dev": "node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.dev.config.js --progress --colors --host 0.0.0.0",
     "start": "webpack-dev-server --config webpack.dev.config.js --progress --colors --host 0.0.0.0",
-    "build": "npm run clearBuild && webpack --config webpack.dev.config.js --progress --profile --colors",     "clearBuild": "IF EXIST build del \"build\\*.*\" /Q",
-
+    "build": "npm run clearBuild && webpack --config webpack.dev.config.js --progress --profile --colors",
+    "clearBuild": "IF EXIST build del \"build\\*.*\" /Q",
     "dist": "npm run clearProd && webpack -p --config webpack.dist.config.js --progress --colors",
     "eslint": "eslint app --ext .js",
     "eslintFix": "eslint app --ext .js --fix",

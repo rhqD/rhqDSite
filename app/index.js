@@ -11,30 +11,24 @@ import {AppContainer} from 'react-hot-loader';
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
 const rootElement = document.getElementById('root');
-render(
-  <AppContainer>
-    <Root
-      store={store}
-      history={history}
-      rootRoute={routes}
-    />
-  </AppContainer>,
-  rootElement
-);
+
+const renderApp = () => {
+  render(
+    <AppContainer>
+      <Root
+        store={store}
+        history={history}
+        rootRoute={routes}
+      />
+    </AppContainer>,
+    rootElement
+  );
+}
+
+renderApp();
 
 if (module.hot){
   module.hot.accept(['./root', './routes/rootRoute'], () => {
-    const RootContainer = require('./root').default;
-    const rootRoute = require('./routes/rootRoute');
-    render(
-      <AppContainer>
-        <RootContainer
-          store={store}
-          history={history}
-          rootRoute={rootRoute}
-        />
-      </AppContainer>,
-      rootElement
-    );
+    renderApp();
   });
 }
