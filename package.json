@@ -4,7 +4,8 @@
   "description": "react+redux+react-router+postcss+babel+webpack+mocha+istanbul",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.config.js --progress --colors --host 0.0.0.0",
-    "build": "npm run clearBuild && webpack --config webpack.dev.config.js --progress --profile --colors",
+    "build": "npm run clearBuild && webpack --config webpack.dev.config.js --progress --profile --colors",     "clearBuild": "IF EXIST build del \"build\\*.*\" /Q",
+
     "dist": "npm run clearProd && webpack -p --config webpack.dist.config.js --progress --colors",
     "eslint": "eslint app --ext .js",
     "eslintFix": "eslint app --ext .js --fix",
