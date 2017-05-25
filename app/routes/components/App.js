@@ -3,9 +3,8 @@ import styles from './App.css';
 import classNames from 'classnames/bind';
 import '@/css/theme.css';
 import autoBind from 'react-autobind';
-import {Button, FormControl, Modal} from 'react-bootstrap';
+import {Button, FormControl} from 'react-bootstrap';
 import _ from 'lodash';
-import ReactAutoComplete from 'react-autocomplete';
 import Checkbox from '$/Checkbox';
 import Item from './Item';
 import {generateActionCreator} from '@/common/actionCreatorGenerator';
@@ -77,21 +76,6 @@ class App extends Component{
     this.items = [];
     return (
       <div className={cx({app: true})}>
-        <Modal show={true}>
-          <Modal.Body>
-            <ReactAutoComplete
-              value={this.state.test}
-              items={['abc', 'def', 'ghi']}
-              getItemValue={(v) => (v)}
-              shouldItemRender={(state, value) => (_.includes(_.lowerCase(state), _.lowerCase(value)))}
-              sortItems={(a = '', b = '', value) => (_.lowerCase(a).indexOf(_.lowerCase(value)) - _.lowerCase(b).indexOf(_.lowerCase(value)))}
-              renderMenu={(children) => (<div className={cx({menuContainer: true, emptyMenu: _.isEmpty(children)})}>{children}</div>)}
-              renderItem={this.renderItem}
-              onSelect={(value) => (onChange(value))}
-              onChange={(e) => {this.setState({test: e.target.value})}}
-            />
-          </Modal.Body>
-        </Modal>
         <div className={`${cx({header: true})} 3DBox`}>
           <FormControl
             className={cx({input: true})}
