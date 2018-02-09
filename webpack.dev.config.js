@@ -47,6 +47,10 @@ module.exports = {
       include: __dirname
     },
     {
+      test: /\.worker\.js$/,
+      loader: 'worker-loader'
+    },
+    {
       test: /\.css?$/,
       loaders: [
         'style',

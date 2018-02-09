@@ -4,18 +4,33 @@ import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 import rootReducer from '../routes/rootReducer';
 import ReduxDevTools from '../devTools/ReduxDevTools';
+import Worker from './reducer.worker';
 
-const enhancer = compose(
-  applyMiddleware(thunk, createLogger()),
-  ReduxDevTools.instrument(),
-  persistState(
-    window.location.href.match(
-      /[?&]debug_session=([^&#]+)\b/
-    )
-  )
-);
 
 export default function configureStore(initialState){
+  debugger
+  const reducerWorker = new Worker();
+  reducerWorker.postMessage({data: 'asd'});
+  const workerReducerMiddleware = (store) => (next) => (action) => {
+    debugger
+    reducerWorker.postMessage(action);
+    reducerWorker.onmessage = (event) => {next({
+      type: 'newState',
+      data: event.data
+    });};
+    next(action);
+  }
+
+  const enhancer = compose(
+    applyMiddleware(thunk, createLogger(), workerReducerMiddleware),
+    ReduxDevTools.instrument(),
+    persistState(
+      window.location.href.match(
+        /[?&]debug_session=([^&#]+)\b/
+      )
+    )
+  );
+
   const store = createStore(
     rootReducer,
     initialState,

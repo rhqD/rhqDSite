@@ -1,9 +1,15 @@
 import {routerReducer as routing} from 'react-router-redux';
 import {combineReducers} from 'redux';
-import app from './reducers';
+
+const fakeApp = (state = {loginAlready: false}, action) => {
+  if (action.type === 'newState'){
+    return state;
+  }
+  return state;
+};
 
 const rootReducer = combineReducers({
-  app,
+  app: fakeApp,
   routing
 });
 

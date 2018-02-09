@@ -7,11 +7,10 @@ import Root from './root';
 import configureStore from './store';
 import routes from './routes/rootRoute';
 import {AppContainer} from 'react-hot-loader';
-
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
 const rootElement = document.getElementById('root');
-
+debugger
 const renderApp = () => {
   render(
     <AppContainer>

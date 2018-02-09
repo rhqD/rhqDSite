@@ -10,3 +10,5 @@ const loginAlready = {
 const state = combineReducers({
   loginAlready: createCommonReducer(false, loginAlready)
 })
+
+export default state;
